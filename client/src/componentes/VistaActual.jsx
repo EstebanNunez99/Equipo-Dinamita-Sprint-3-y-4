@@ -2,6 +2,7 @@ import Catalogo from "../paginas/Catalogo";
 import Carrito from "../paginas/Carrito";
 import FormularioContacto from "../paginas/FormularioContacto";
 import DetalleProducto from "../paginas/DetalleProducto";
+import Home from "../paginas/Home";
 
 function VistaActual({ 
     vista, 
@@ -12,13 +13,24 @@ function VistaActual({
     agregarAlCarrito,
     eliminarDelCarrito
 }) {
-    if (vista === 'catalogo' && !productoSeleccionado) {
-        return <Catalogo verDetalle={(producto)=>{
-            seleccionarProducto(producto);
-            cambiarVista('detalle');    
-        }} />
+
+    if (vista === 'home') {
+        return <Home cambiarVista={cambiarVista} />
     }
-    if (vista === 'detalle' && productoSeleccionado) {
+
+    if (vista === 'catalogo') {
+        return (
+            <Catalogo verDetalle={(producto)=>{
+            seleccionarProducto(producto);
+            cambiarVista('detalle');   
+        }} />
+        ) 
+    }
+    if (vista === 'detalle') {
+        if (!productoSeleccionado) {
+            cambiarVista('catalogo');
+            return null;
+        }
         return <DetalleProducto
             producto={productoSeleccionado}
             volverAlCatalogo={()=>{
@@ -37,6 +49,6 @@ function VistaActual({
     if (vista === 'contacto') { 
         return <FormularioContacto />
     }
-    return <div><h2>Vista no encontrada</h2></div>
+    return null
 }       
 export default VistaActual;

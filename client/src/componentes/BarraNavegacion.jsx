@@ -4,6 +4,7 @@ function BarraNavegacion({ cantidadCarrito, cambiarVista }) {
       <h2>Mueblería Hermanos Jota</h2>
       <p>🛒 Carrito: {cantidadCarrito} productos</p>
       <div style={{ marginTop: '0.5rem' }}>
+        <button onClick={()=>cambiarVista('home')}> Inicio </button>
         <button onClick={()=>cambiarVista('catalogo')}> Catalogo </button>
         <button onClick={()=>cambiarVista('carrito')}> Ver Carrito </button>
         <button onClick={()=>cambiarVista('contacto')}> Contacto </button>

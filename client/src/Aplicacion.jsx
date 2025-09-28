@@ -8,7 +8,7 @@ function Aplicacion() {
   //estados globales
   const [carrito, actualizarCarrito] = useState([]);
   const [productoSeleccionado, seleccionarProducto] = useState(null);
-  const [vista, cambiarVista] = useState('catalogo'); // 'catalogo', 'detalle', 'carrito', 'contacto'
+  const [vista, cambiarVista] = useState('home'); // 'catalogo', 'detalle', 'carrito', 'contacto'
   
   const agregarAlCarrito = (producto) => {
     actualizarCarrito([...carrito, producto]);
@@ -38,7 +38,7 @@ function Aplicacion() {
         agregarAlCarrito={agregarAlCarrito}
         eliminarDelCarrito={eliminarDelCarrito}
       />
-      
+
       <PiePagina />
     </div>
   )
