@@ -1,3 +1,4 @@
+import '../estilos/formularioContacto.css';
 import { useState } from "react";
 
 function FormularioContacto() {
@@ -21,7 +22,7 @@ function FormularioContacto() {
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div className='formulario'>
       <h2>Contacto</h2>
       {enviado ? (
         <p>¡Gracias por contactarnos! Te responderemos pronto.</p>
@@ -50,7 +51,7 @@ function FormularioContacto() {
             />
           </div>
           <div>
-            <label>Mensaje:</label>
+            <label >Mensaje:</label>
             <br />
             <textarea
               name="mensaje"

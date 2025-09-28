@@ -1,13 +1,13 @@
 import TarjetaProducto from "../componentes/TarjetaProducto";
 import productos from "../datos/productos";
-import '../estilos/catalogo.css';
+import '../estilos/Catalogo.css';
 
 function Catalogo({verDetalle}) {
     return (
-        <div>
+        <div className="catalogo">
             <h2>Catalogo de productos</h2>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+            <div className="grilla">
                 {productos.map(producto => (
                     <TarjetaProducto 
                         key={producto.id}

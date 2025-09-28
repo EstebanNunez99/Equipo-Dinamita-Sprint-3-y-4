@@ -1,30 +1,18 @@
-.tarjeta-producto {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.catalogo {
+  padding: var(--espaciado-md);
+  background-color: var(--color-fondo);
+}
+
+.catalogo h2 {
+  margin-bottom: var(--espaciado-sm);
+  font-size: 1.8rem;
+  color: var(--color-principal);
+  font-family: var(--fuente-principal);
   text-align: center;
-  background-color: #fdfdfd;
 }
 
-.tarjeta-producto img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.tarjeta-producto button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.tarjeta-producto button:hover {
-  background-color: #555;
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--espaciado-sm);
 }

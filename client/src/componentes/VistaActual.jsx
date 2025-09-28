@@ -1,5 +1,4 @@
 import Catalogo from "../paginas/Catalogo";
-import Carrito from "../paginas/Carrito";
 import FormularioContacto from "../paginas/FormularioContacto";
 import DetalleProducto from "../paginas/DetalleProducto";
 import Home from "../paginas/Home";
@@ -9,9 +8,7 @@ function VistaActual({
     productoSeleccionado, 
     seleccionarProducto,
     cambiarVista,
-    carrito,
     agregarAlCarrito,
-    eliminarDelCarrito
 }) {
 
     if (vista === 'home') {
@@ -38,12 +35,6 @@ function VistaActual({
                 cambiarVista('catalogo');
             }}
             agregarAlCarrito={agregarAlCarrito}
-        />
-    }
-    if (vista === 'carrito') {
-        return <Carrito 
-            productosCarrito={carrito}
-            eliminarDelCarrito={eliminarDelCarrito}
         />
     }
     if (vista === 'contacto') { 
