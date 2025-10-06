@@ -1,0 +1,13 @@
+{
+  "name": "muebleria-hermanos-jota",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run dev-client\" \"npm run dev-backend\"",
+    "dev-backend": "npm start --prefix backend",
+    "dev-client": "npm run dev --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
